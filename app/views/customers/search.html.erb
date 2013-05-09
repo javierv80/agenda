@@ -1,0 +1,11 @@
+<h2>Resultado:</h2>
+
+<% if @customers.any? %>
+
+	<%= flash[:notice] = "Cliente encontrado" %>
+	<%= render @customers %>
+
+<% else %>
+	<%= flash[:notice] = "Cliente no encontrado, crear nuevo" %>
+	<%= render 'form'%> 
+<% end %>

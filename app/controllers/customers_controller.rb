@@ -44,4 +44,9 @@ class CustomersController < ApplicationController
   	redirect_to root_url, :notice => 'Cliente Eliminado'
   end
 
+  def search
+    @customers = Customer.search(params)
+    @customer = Customer.new
+  end
+
 end
