@@ -1,4 +1,7 @@
 Adres::Application.routes.draw do
+
+  resources :customers
+
   devise_for :users
 
   # The priority is based upon order of creation:
